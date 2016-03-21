@@ -1778,6 +1778,7 @@ rm -rf %{buildroot}
 %{__install} -d %{buildroot}%{_sharedstatedir}/collectd/
 %{__install} -d %{buildroot}%{_sysconfdir}/collectd.d/
 
+%{__mkdir} -p %{buildroot}%{_sysconfdir}/collectd.d/
 %{__mkdir} -p %{buildroot}%{_localstatedir}/www
 %{__mkdir} -p %{buildroot}/%{_sysconfdir}/httpd/conf.d
 
