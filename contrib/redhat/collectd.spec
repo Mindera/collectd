@@ -1870,6 +1870,7 @@ fi
 
 
 %files
+%dir %{_sysconfdir}/collectd.d
 %doc AUTHORS COPYING ChangeLog README
 %config(noreplace) %{_sysconfdir}/collectd.conf
 %if 0%{?el7:1}

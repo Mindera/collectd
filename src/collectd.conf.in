@@ -1539,4 +1539,4 @@
 #  </Host>
 #</Plugin>
 
-Include "@{sysconfdir}/collectd.d/*.conf"
+Include "/etc/collectd.d/*.conf"
