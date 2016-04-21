@@ -849,6 +849,166 @@ Requires:	collectd%{?_isa} = %{version}-%{release}
 %description -n collectd-utils
 Collectd utilities
 
+%package all
+Summary:	Collectd virtual package for collectd plus plugins
+Group:		System Environment/Daemons
+Requires:	%{name}%{?_isa} = %{version}-%{release}
+%if %{with_amqp}
+Requires:	collectd-amqp = %{version}-%{release}
+%endif
+%if %{with_apache}
+Requires:	collectd-apache = %{version}-%{release}
+%endif
+%if %{with_aquaero}
+Requires:	collectd-aquaero = %{version}-%{release}
+%endif
+%if %{with_ascent}
+Requires:	collectd-ascent = %{version}-%{release}
+%endif
+%if %{with_barometer}
+Requires:	collectd-barometer = %{version}-%{release}
+%endif
+%if %{with_bind}
+Requires:	collectd-bind = %{version}-%{release}
+%endif
+%if %{with_ceph}
+Requires:	collectd-ceph = %{version}-%{release}
+%endif
+%if %{with_curl}
+Requires:	collectd-curl = %{version}-%{release}
+%endif
+%if %{with_curl_json}
+Requires:	collectd-curl_json = %{version}-%{release}
+%endif
+%if %{with_curl_xml}
+Requires:	collectd-curl_xml = %{version}-%{release}
+%endif
+%if %{with_dbi}
+Requires:	collectd-dbi = %{version}-%{release}
+%endif
+%if %{with_disk}
+Requires:	collectd-disk = %{version}-%{release}
+%endif
+%if %{with_dns}
+Requires:	collectd-dns = %{version}-%{release}
+%endif
+%if %{with_email}
+Requires:	collectd-email = %{version}-%{release}
+%endif
+%if %{with_gmond}
+Requires:	collectd-gmond = %{version}-%{release}
+%endif
+%if %{with_hddtemp}
+Requires:	collectd-hddtemp = %{version}-%{release}
+%endif
+%if %{with_ipmi}
+Requires:	collectd-ipmi = %{version}-%{release}
+%endif
+%if %{with_iptables}
+Requires:	collectd-iptables = %{version}-%{release}
+%endif
+%if %{with_java}
+Requires:	collectd-java = %{version}-%{release}
+%endif
+%if %{with_log_logstash}
+Requires:	collectd-log_logstash = %{version}-%{release}
+%endif
+%if %{with_lvm}
+Requires:	collectd-lvm = %{version}-%{release}
+%endif
+%if %{with_memcachec}
+Requires:	collectd-memcachec = %{version}-%{release}
+%endif
+%if %{with_mic}
+Requires:	collectd-mic = %{version}-%{release}
+%endif
+%if %{with_modbus}
+Requires:	collectd-modbus = %{version}-%{release}
+%endif
+%if %{with_mysql}
+Requires:	collectd-mysql = %{version}-%{release}
+%endif
+%if %{with_mqtt}
+Requires:	collectd-mqtt = %{version}-%{release}
+%endif
+%if %{with_netlink}
+Requires:	collectd-netlink = %{version}-%{release}
+%endif
+%if %{with_nginx}
+Requires:	collectd-nginx = %{version}-%{release}
+%endif
+%if %{with_notify_desktop}
+Requires:	collectd-notify_desktop = %{version}-%{release}
+%endif
+%if %{with_notify_email}
+Requires:	collectd-notify_email = %{version}-%{release}
+%endif
+%if %{with_nut}
+Requires:	collectd-nut = %{version}-%{release}
+%endif
+%if %{with_openldap}
+Requires:	collectd-openldap = %{version}-%{release}
+%endif
+%if %{with_perl}
+Requires:	collectd-perl = %{version}-%{release}
+%endif
+%if %{with_pinba}
+Requires:	collectd-pinba = %{version}-%{release}
+%endif
+%if %{with_ping}
+Requires:	collectd-ping = %{version}-%{release}
+%endif
+%if %{with_postgresql}
+Requires:	collectd-postgresql = %{version}-%{release}
+%endif
+%if %{with_python}
+Requires:	collectd-python = %{version}-%{release}
+%endif
+%if %{with_redis}
+Requires:	collectd-redis = %{version}-%{release}
+%endif
+%if %{with_rrdcached}
+Requires:	collectd-rrdcached = %{version}-%{release}
+%endif
+%if %{with_rrdtool}
+Requires:	collectd-rrdtool = %{version}-%{release}
+%endif
+%if %{with_sensors}
+Requires:	collectd-sensors = %{version}-%{release}
+%endif
+%if %{with_sigrok}
+Requires:	collectd-sigrok = %{version}-%{release}
+%endif
+%if %{with_smart}
+Requires:	collectd-smart = %{version}-%{release}
+%endif
+%if %{with_snmp}
+Requires:	collectd-snmp = %{version}-%{release}
+%endif
+%if %{with_varnish}
+Requires:	collectd-varnish = %{version}-%{release}
+%endif
+%if %{with_virt}
+Requires:	collectd-virt = %{version}-%{release}
+%endif
+%if %{with_write_http}
+Requires:	collectd-write_http = %{version}-%{release}
+%endif
+%if %{with_write_kafka}
+Requires:	collectd-write_kafka = %{version}-%{release}
+%endif
+%if %{with_write_redis}
+Requires:	collectd-write_redis = %{version}-%{release}
+%endif
+%if %{with_write_riemann}
+Requires:	collectd-write_riemann = %{version}-%{release}
+%endif
+%if %{with_xmms}
+Requires:	collectd-xmms = %{version}-%{release}
+%endif
+%description all
+Collectd virtual package that installs collectd and most of plugins
+
 %prep
 %setup -q
 
@@ -2393,6 +2553,8 @@ fi
 
 %files contrib
 %doc contrib/
+
+%files all
 
 %changelog
 #* TODO: next feature release changelog
